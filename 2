@@ -1,0 +1,19 @@
+#include <fstream>
+#include <iostream>
+#include <string>
+
+using namespace std;
+
+int main()
+{
+    ifstream sportsList
+    sportsList.open("sports.txt");
+    string sp = "";
+    for(int i = 0; i < 21; ++i)
+    {
+        getline(sportsList, sp);
+        cout << i + 1 << ". " << sp << endl;
+    }
+    sportsList.close();
+    return 0;
+}
